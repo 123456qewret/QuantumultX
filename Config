@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js,
 ;ssid=SSID策略, PROXY, PROXY, 一般路由器(自己修改WiFi名称): PROXY, 翻墙路由器(自己修改WiFi名称): DIRECT, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/ssid.png
 ;available=健康策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/available.png
 ;round-robin=负载均衡, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/roundrobin.png
-url-latency-benchmark=Auto, resource-tag-regex=AMY|TAG|EXFLUX, server-tag-regex=^(?!.*?(游戏|实验)).*香港, check-interval=600, tolerance=10, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
+#url-latency-benchmark=Auto, server-tag-regex=^(?!.*?(游戏|实验)).*香港, check-interval=600, tolerance=10, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 static=香港, server-tag-regex=^(?!.*?(游戏|实验)).*香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 static=日本, server-tag-regex=^(?!.*?(游戏)).*日本, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 static=新加坡, server-tag-regex=🇸🇬, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -49,16 +49,22 @@ static=Apple, DIRECT, 香港, 日本, 台湾, 美国, img-url=https://raw.github
 static=Steam, DIRECT, 香港, 美国, 低价购物, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
 static=Game, server-tag-regex=游戏, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 static=Speedtest, DIRECT, PROXY, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
-static=Telegram, PROXY, 新加坡, 香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-static=YouTube, Auto, 香港, 新加坡, 台湾, 日本, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-static=Advertising, REJECT, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+static=Telegram, proxy, 新加坡, 香港, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+static=YouTube, 香港, 新加坡, 台湾, 日本, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+static=Rejected, reject, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
 
 [server_local]
 
 [server_remote]
+https://sub.store/download/TAG, tag=TAG, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TAG.png, update-interval=86400, opt-parser=true, enabled=true
+https://sub.store/download/AMY, tag=AMY, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/AmyTelecom.png, update-interval=86400, opt-parser=true, enabled=true
+https://sub.store/download/YTOO, tag=YTOO, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YTOO.png, update-interval=86400, opt-parser=true, enabled=true
+https://sub.store/download/EXFLUX, tag=EXFLUX, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GuGuEX.png, update-interval=86400, opt-parser=true, enabled=true
+https://sub.store/download/Element, tag=Element, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Element.png, update-interval=86400, opt-parser=true, enabled=false
+https://sub.store/download/Paoche, tag=Paoche, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Kache.png, update-interval=86400, opt-parser=true, enabled=false
 
 [filter_local]
-HOST-KEYWORD, hanime, Auto
+HOST-KEYWORD, hanime, PROXY
 HOST-SUFFIX, njcb.com.cn, DIRECT
 HOST-KEYWORD, mojidict, DIRECT
 HOST-KEYWORD, .jp, 日本
@@ -77,12 +83,12 @@ IP-CIDR, 172.16.0.0/12, DIRECT
 IP-CIDR, 192.168.0.0/16, DIRECT
 IP-CIDR, 224.0.0.0/24, DIRECT
 
-GEOIP, cn, DIRECT
+GEOIP, CN, DIRECT
 FINAL, PROXY
 
 [filter_remote]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=Advertising, force-policy=Advertising, update-interval=86400, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Privacy.list, tag=Privacy, force-policy=Advertising, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=Advertising, force-policy=Rejected, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Guard/Privacy.list, tag=Privacy, force-policy=Rejected, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list, tag=Bilibili, force-policy=Bilibili, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Bahamut/Bahamut.list, tag=Bahamut, force-policy=台湾, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, update-interval=86400, opt-parser=true, enabled=true
@@ -109,7 +115,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhi
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.qxrewrite, tag=B站助手, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/123456qewret/QuantumultX/main/Rewrite, tag=Rewrite, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Redirect/Redirect.conf, tag=Redirect, update-interval=86400, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/123456qewret/QuantumultX/main/GetCookie#out=youth.js, tag=Cookie, update-interval=86400, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/123456qewret/QuantumultX/main/Cookie#out=youth.js, tag=Cookie, update-interval=86400, opt-parser=true, enabled=false
 https://xmkczs.com/quantumultX/ioshkj.conf, tag=福利软件, update-interval=86400, opt-parser=true, enabled=false
 
 [task_local]
@@ -120,5 +126,6 @@ event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/
 11 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=false
 
 [mitm]
+
 hostname = sub.store, -*.weibo.cn
 simple_cert_hostname = sub.store
