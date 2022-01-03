@@ -56,12 +56,6 @@ static=Rejected, reject, proxy, direct, img-url=https://raw.githubusercontent.co
 [server_local]
 
 [server_remote]
-https://sub.store/download/TAG, tag=TAG, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TAG.png, update-interval=86400, opt-parser=true, enabled=true
-https://sub.store/download/AMY, tag=AMY, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/AmyTelecom.png, update-interval=86400, opt-parser=true, enabled=true
-https://sub.store/download/YTOO, tag=YTOO, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YTOO.png, update-interval=86400, opt-parser=true, enabled=true
-https://sub.store/download/EXFLUX, tag=EXFLUX, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GuGuEX.png, update-interval=86400, opt-parser=true, enabled=true
-https://sub.store/download/Element, tag=Element, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Element.png, update-interval=86400, opt-parser=true, enabled=false
-https://sub.store/download/Paoche, tag=Paoche, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Kache.png, update-interval=86400, opt-parser=true, enabled=false
 
 [filter_local]
 HOST-KEYWORD, hanime, PROXY
