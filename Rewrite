@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, app.bilibili.com, grpc.biliapi.net, afd.baidu.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, app.bilibili.com, grpc.biliapi.net, afd.baidu.com
 
 
 
