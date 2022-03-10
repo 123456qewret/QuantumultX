@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, app.bilibili.com, grpc.biliapi.net, afd.baidu.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, app.bilibili.com, grpc.biliapi.net, afd.baidu.com
 
 
 
@@ -62,15 +62,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 # Adblock
 # 去微信公众号广告(By Choler)
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-
-# Youtube去广告(By DivineEngine)
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
-
 
 # bilibili去广告(iOS15)
 # 开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
