@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, afd.baidu.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, oauth.secure.pixiv.net, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, afd.baidu.com
 
 
 
@@ -32,6 +32,8 @@ hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.
 # 百度云倍速
 https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
 
+# ～ Pixiv去除广告（2022-05-19）@ddgksf2013
+^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/pixivpro.js
 
 
 # Rewrite
