@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, oauth.secure.pixiv.net, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, afd.baidu.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, oauth.secure.pixiv.net, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, ap?.bilibili.com, ap?.biliapi.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, mp.weixin.qq.com, afd.baidu.com
 
 
 
@@ -22,6 +22,9 @@ hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.
 # 保障显示在商品下方
 ^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
 ^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
+
+# ～ Nicegram解鎖會員權限（2022-04-10）@ddgksf2013
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
 
 # Document Pro 解锁会员编辑功能（2022-05-11）@ddgksf2013
 ^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\/\w{12}\/(state$|refresh$|check$) url script-request-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js
