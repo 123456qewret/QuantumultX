@@ -23,12 +23,6 @@ hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.
 ^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
 ^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
 
-# ～ Nicegram解鎖會員權限（2022-04-10）@ddgksf2013
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
-
-# Document Pro 解锁会员编辑功能（2022-05-11）@ddgksf2013
-^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\/\w{12}\/(state$|refresh$|check$) url script-request-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js
-
 # 国区wps
 ^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 
