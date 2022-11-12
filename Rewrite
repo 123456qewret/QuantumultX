@@ -45,7 +45,8 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 # 搜索指定地区的番剧
 ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 # ～ BiliBili_哔哩哔哩_繁体CC字幕转中文简体@ddgksf2013
-^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw//master/Script/bilibili_cc.js
+^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_cc.js
+
 # - 哔哩哔哩Upos服务器替换为腾讯Cos对象存储@ddgksf2013
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) url 302 https://upos-sz-mirrorcos.bilivideo.com/$1
 
