@@ -20,8 +20,8 @@ hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.
 # 淘宝比价
 # 历史价格在“保障”中显示，需要点击“保障”才能看到，和京东不一样
 # 保障显示在商品下方
-^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
-^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
+#^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
+#^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
 
 # 国区wps
 ^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
