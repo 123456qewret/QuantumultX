@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, afd.baidu.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, afd.baidu.com, optimus-ads.amap.com, m5.amap.com, sns.amap.com
 
 
 
@@ -81,3 +81,13 @@ abematv\.akamaized\.net/.+/\d+/playlist\.m3u8 url request-header /\d+/playlist.m
 # 贴吧去广告
 ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
 ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/((frs|pb)\/page|excellent\/personalized|frs\/generalTabList) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
+
+# ～ 高德地图☆净化（2023-01-04）@ddgksf2013
+^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif url reject-img
