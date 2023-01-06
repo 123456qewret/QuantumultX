@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, afd.baidu.com, optimus-ads.amap.com, m5.amap.com, sns.amap.com
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, afd.baidu.com, optimus-ads.amap.com, m5.amap.com, sns.amap.com, hostname = ad.12306.cn
 
 
 
@@ -91,3 +91,6 @@ abematv\.akamaized\.net/.+/\d+/playlist\.m3u8 url request-header /\d+/playlist.m
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+
+#12306 去除倒计时 made by ddgksf2013 on 2023-01-06
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/12306.js
