@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vipapi.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vas.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn
 
 
 
@@ -24,7 +24,6 @@ hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.
 #^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/tb_price.js
 
 # 国区wps
-#^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 ^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
 
 # WPS解锁稻壳会员
