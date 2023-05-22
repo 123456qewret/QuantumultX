@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vas.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, *abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vas.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, linear-abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn
 
 
 
@@ -62,7 +62,7 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url 302 https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1
 
 # Abema强制1080p
-abematv\.akamaized\.net/.+/\d+/playlist\.m3u8 url request-header /\d+/playlist.m3u8 request-header /1080/playlist.m3u8
+(linear\-abematv\.akamaized\.net/.*)/\d\d\d/(.*) url request-header /\d\d\d/$2 request-header /1080/$2
 
 
 
