@@ -23,7 +23,7 @@ address=/dns.alidns.com/223.5.5.5
 
 [http_backend]
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, tag=Boxjs, path=^/boxjs, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=true
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js, tag=Sub-Store, path=^/substore, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true
+https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, tag=Sub-Store, path=^/substore, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true
 
 [policy]
 ;ssid=SSID策略, PROXY, PROXY, 一般路由器(自己修改WiFi名称): PROXY, 翻墙路由器(自己修改WiFi名称): DIRECT, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/ssid.png
@@ -53,7 +53,6 @@ static=Rejected, reject, proxy, direct, img-url=https://raw.githubusercontent.co
 
 [server_remote]
 
-
 [filter_local]
 host-keyword, cwt, direct
 host-suffix, asnapieu.com, direct
@@ -62,7 +61,7 @@ HOST-KEYWORD, openai, 美国
 HOST-KEYWORD, hanime, 香港
 HOST-KEYWORD, abema, 日本
 HOST-KEYWORD, .jp, 日本
-#HOST-KEYWORD, tagemby, 🇯🇵 TAG 日本 08
+HOST-KEYWORD, tagemby, 🇯🇵 TAG 日本 04
 HOST-SUFFIX, extshort.weixin.qq.com, 香港
 #B站换区
 IP-CIDR, 203.107.1.1/24, reject
@@ -107,15 +106,15 @@ https://github.com/VirgilClyne/GetSomeFries/blob/main/ruleset/ASN.Telegram.list?
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=ASN.CN, force-policy=direct, update-interval=86400, opt-parser=true, enabled=true
 
 [rewrite_local]
+(linear\-abematv\.akamaized\.net/.*)/\d\d\d/(.*) url request-header /\d\d\d/$2 request-header /1080/$2
 #SubStore 访问https://sub-store.vercel.app/ 进行管理
-^https?:\/\/sub\.store url script-analyze-echo-response https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
+^https?:\/\/sub\.store url script-analyze-echo-response https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js
 #boxjs 访问:http://boxjs.net 进行管理
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
 [rewrite_remote]
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Sinppet/NewBing.snippet, tag=New Bing for other browsers, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Siri.qxrewrite?raw=true, tag= iRingo for Siri & Search, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Location.qxrewrite?raw=true, tag= iRingo for Location Services, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/iRingo/raw/main/snippet/Siri.snippet, tag= iRingo: Siri & Search, update-interval=86400, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/iRingo/raw/main/snippet/Location.snippet, tag= iRingo: Location & Map, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf, tag=ADBlock, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/123456qewret/QuantumultX/main/Rewrite, tag=Rewrite, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Redirect/Redirect.conf, tag=Redirect, update-interval=86400, opt-parser=true, enabled=true
@@ -125,6 +124,7 @@ https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Amap.conf, tag=高德�
 https://github.com/app2smile/rules/raw/master/module/tieba-qx.conf, tag=贴吧净化, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.snippet, tag=知乎助手, update-interval=86400, opt-parser=true, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf, tag=微博lite, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/WeiRen0/Free1/main/Lsp.conf, tag=by-伟人LSP🚗库, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/123456qewret/QuantumultX/main/Cookie#out=youth.js, tag=Cookie, update-interval=86400, opt-parser=true, enabled=false
 #http://ox.xmkczs.com/quantumultX/ioshkj.conf, tag=福利资源, update-interval=172800, opt-parser=true, enabled=false
 
@@ -132,7 +132,7 @@ https://raw.githubusercontent.com/123456qewret/QuantumultX/main/Cookie#out=youth
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/traffic-check.js, tag=策略流量查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png, enabled=true
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP查询, img-url=location.fill.viewfinder.system, enabled=true
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system, enabled=true
-30 10 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/cron-sync-artifacts.min.js, tag=SubStore同步, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true
+30 10 * * * https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, tag=SubStore同步, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true
 20 */30 5-23 * * * https://raw.githubusercontent.com/123456qewret/Youth/main/youth.js, tag=中青看点, img-url=https://raw.githubusercontent.com/Orz-3/task/master/youth.png, enabled=false
 30 */2 * * * https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/DisneyPlusPolicySwitcher/disney_checker.js, tag=Disney+ 解锁检测, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png, enabled=false
 0 */2 * * * https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/NetflixPolicySwitcher/netflix_checker.js, tag=Netflix 解锁检测, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png, enabled=false
@@ -141,5 +141,5 @@ event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/
 [mitm]
 passphrase = 
 p12 = 
-hostname = sub.store, -ios.prod.ftl.netflix.com
+hostname = sub.store, boxjs.net,boxjs.com, -ios.prod.ftl.netflix.com
 simple_cert_hostname = sub.store
