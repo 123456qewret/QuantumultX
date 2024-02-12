@@ -1,4 +1,4 @@
-hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vas.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, linear-abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, api.m.jd.com, trade-acs.m.taobao.com, restore-access.indream.app, license.pdfexpert.com, *.docer.wps.cn, vas.wps.cn, vas.wps.cn, account.wps.cn, ap*.intsig.net, pan.baidu.com, ap?.bilibili.com, ap?.biliapi.net, upos-hz-mirrorakam.akamaized.net, *.hdslb.com, testflight.apple.com, shopmember.m.jd.com, linear-abematv.akamaized.net, mp.weixin.qq.com, ad.12306.cn, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
 
 
 
@@ -75,5 +75,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #12306 去除倒计时 made by ddgksf2013 on 2023-01-06
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/12306.js
 
-# 彩云天气
-^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
+# 彩云天气 hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
+^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
